@@ -19,13 +19,13 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
-      - name: Install Dependencies
+      - name: Install Dependencies (pnpm)
         run: pnpm install
 
-      - name: Build
+      - name: Build (pnpm)
         run: pnpm run build
 
-      - name: Deploy
+      - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
